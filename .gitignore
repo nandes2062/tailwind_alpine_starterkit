@@ -1,0 +1,21 @@
+# SITE
+# ENV wird lokal definiert, hat deshalb nichts im Repo zu suchen
+.env
+
+# Keine Node-Module versionieren!
+# Unnötig groß für ein Repo, und sie kommen ja per npm/yarn.
+node_modules
+
+# IDE config, brauchen wir nicht in diesem Projekt
+.idea
+
+# site files
+html/*.ico
+html/*.html
+html/*.json
+html/*.json
+html/*.css
+html/*/
+
+# diverse
+.idea

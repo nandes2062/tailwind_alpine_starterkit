@@ -1,0 +1,39 @@
+{% set currentPage = 'Inicio' %}
+{% set siteName = 'Site name example' %}
+{% set slogan = 'Slogan site' %}
+{% set description = 'Description Site' %}
+{% set siteVersion = '1.0.0' %}
+{% set path_media = './resources/' %}
+{% set path_page = './' %}
+{% block header %}{% endblock %}
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if currentPage == 'Inicio' %}
+    <title>{{ siteName }} {{ slogan }}</title>
+    <meta property="og:title" content="{{ siteName }} {{ slogan }}">
+  {% else %}
+    <title>{{ currentPage }} - {{ siteName }} {{ slogan }}</title>
+    <meta property="og:title" content="{{ currentPage }} - {{ siteName }} {{ slogan }}">
+  {% endif %}
+    <meta name="designer" content="Fernando Javier Averanga Aruquipa (https://fernandoaveranga.netlify.app)">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:description" content="{{ description }}">
+    {# <meta name="author" content="">
+    <meta name="keywords" content=""> #}
+    <link rel="stylesheet" href="{{ path_media }}css/tailwind.css?v={{ siteVersion }}">
+    <link rel="stylesheet" href="{{ path_media }}css/styles.css?v={{ siteVersion }}">
+  </head>
+  <body class="flex flex-col min-h-screen">
+    {% include "templates/header.twig" %}
+    <main class="flex-grow">
+    {% block main %}{% endblock %}
+    </main>
+    {% include "templates/footer.twig" %}
+    <script src="{{ path_media }}js/modernizr.js"></script>
+    <script src="{{ path_media }}js/script.js?v={{ siteVersion }}"></script>
+  </body>
+</html>

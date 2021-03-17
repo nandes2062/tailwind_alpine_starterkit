@@ -1,0 +1,26 @@
+/*
+This boilerplate is based in ITCSS and SMACSS
+*/
+
+// Tools
+@import "tools/typography";
+// Generic
+// font-faces imports
+@import "generics/heading-font";
+@import "generics/body-font";
+@import "generics/fontawesome";
+
+// MODULOS (SMACSS) O COMPONENTES (ITCSS)
+  // Son los elementos de UI personalizados de tu interfaz, como botones, tablas, menus, etc.
+  // Crea los archivos adicionales que necesites (uno por componente)
+// @import "components/sidebar";
+
+// Theme (colors and fonts)
+@import "theme/typography";
+
+// Utilities (shame)
+  // Todos los shame que hayas necesitado para solucionar conflictos
+  // o resolver situaciones extremas. Se espera poder mejorarlos luego.
+@import "shame/shame";
+
+

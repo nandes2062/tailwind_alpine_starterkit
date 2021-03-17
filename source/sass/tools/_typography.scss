@@ -1,0 +1,31 @@
+// Typography config
+// This file doesn't generate any css
+// CSS for typography will be generate from theme/_typography.scss file.
+
+// Convert pixels to rem
+@function rem($px) {
+  @return ($px / 16px) * 1rem;
+}
+
+// Font families
+$body-font   : 'Karla', 'Open Sans', 'sans-serif'; // only 400 and 400i
+$heading-font : 'Rubik', 'Arial', 'sans-serif'; // only 700
+
+// Font sizes
+$fontSizes: (
+  title1  : 4rem,
+  title2  : 3rem,
+  title3  : 2.25rem,
+  normal  : rem(17px),
+  small   : rem(15px),
+  smaller : rem(12px)
+);
+
+// Get font size from map
+@function fontSize($size) {
+  @if map-has-key($fontSizes, $size) {
+    @return map-get($fontSizes,$size)
+  } @else {
+    @error '$size is not valid, valid values are t1, t2, t3, normal, small, smaller'
+  }
+};

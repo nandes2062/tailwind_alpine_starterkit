@@ -1,0 +1,63 @@
+/*
+* This file use declarations, functions and mixins from
+* config/_typography.scss
+*/
+:root {
+  --title1  : #{fontSize(title2)};
+  --title2  : #{fontSize(title3)};
+  --title3  : #{fontSize(normal)};
+  @screen md {
+    --title1  : #{fontSize(title1)};
+    --title2  : #{fontSize(title2)};
+    --title3  : #{fontSize(title3)};
+    --normal  : #{fontSize(normal)};
+    --small   : #{fontSize(small)};
+    --smaller : #{fontSize(smaller)};
+  }
+}
+
+body {
+  @apply font-body font-normal text-gray-900;
+  font-size: var(--normal);
+  line-height: 1.6;
+}
+.font-heading {
+  letter-spacing: 0.025em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.t1, .t2, .t3, .t4 {
+  @apply font-head font-semibold;
+  letter-spacing : 0.025em;
+  line-height    :  1.3;
+}
+
+// Set font sizes
+h1, .t1         { font-size : var(--title1); }
+h2, .t2         { font-size : var(--title2); }
+h3, .t3         { font-size : var(--title3); }
+h4, .t4         { font-size : var(--normal); }
+h5, .small      { font-size : var(--small); }
+h6, .smaller    { font-size : var(--smaller); }
+
+// Blockquote
+blockquote {
+  @apply italic ml-4 relative opacity-90;
+  font-size: var(--title3); 
+  letter-spacing: .01em;
+  
+  &::before {
+    content        : "\201C";
+    font-family    : Georgia, serif;
+    font-size      : 3em;
+    position       : absolute;
+    top            : .5em;
+    left           : -.6em;
+    line-height    : 0;
+    letter-spacing : -0.5em;
+  }
+}
+
+::selection {
+  @apply bg-black text-white shadow-none;
+}
