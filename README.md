@@ -8,7 +8,7 @@
 
 ## Project setup
 ```
-cp .env.example .env
+cp .env.development .env
 ```
 ```
 npm install
@@ -24,6 +24,16 @@ php -S localhost:20080
 ```
 
 ### Compiles assets and hot-reloads for development
+```
+gulp
+```
+
+
+## Compiles in production
+```
+cp .env.production .env
+```
+### Compiles assets for production
 ```
 gulp
 ```
