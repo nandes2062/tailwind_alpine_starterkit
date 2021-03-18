@@ -1,5 +1,5 @@
 # tailwind_alpine_starterkit
-### TAILWINDCSS, ALPINEJS, Gulp, Browserify, PostCSS, Sass-ITCSS, Twig, ES6 und tailwind_alpine_starterkit
+### TAILWINDCSS, ALPINEJS, Gulp, Browserify, PostCSS, Sass-ITCSS, Twig, ES6 is tailwind_alpine_starterkit
 
 ## Installation global requeriments
 - Npm
