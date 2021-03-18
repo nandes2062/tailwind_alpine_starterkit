@@ -1,13 +1,10 @@
 {
   "private": true,
-  "name": "data-visualization-elecciones-bo-2020",
+  "name": "tailwind-alpine-starterkit",
   "version": "1.0.0",
   "dependencies": {
     "@ryangjchandler/spruce": "^2.0.1",
-    "almete.wordcloud": "^19.0.0",
-    "alpinejs": "^2.7.0",
-    "chart.js": "^2.9.3",
-    "chartjs-plugin-labels": "^1.1.0"
+    "alpinejs": "^2.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
