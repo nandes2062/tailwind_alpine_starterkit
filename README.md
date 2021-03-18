@@ -1,5 +1,5 @@
-# Data Visualization - Elecciones Bolivia 2020
-### ALPINEJS, TAILWINDCSS, Browserify, PostCSS, Pug, ES6 und Tailpine
+# tailwind_alpine_starterkit
+### TAILWINDCSS, ALPINEJS, Gulp, Browserify, PostCSS, Sass-ITCSS, Twig, ES6 und tailwind_alpine_starterkit
 
 ## Installation global requeriments
 - Npm
